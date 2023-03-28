@@ -1,14 +1,4 @@
-interface DUMMY_EVENTS_TYPE {
-  id: string;
-  title: string;
-  description: string;
-  location: string;
-  date: string;
-  image: string;
-  isFeatured: boolean;
-}
-
-const DUMMY_EVENTS: DUMMY_EVENTS_TYPE[] = [
+const DUMMY_EVENTS = [
   {
     id: "e1",
     title: "Programming for everyone",
