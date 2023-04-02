@@ -5,6 +5,7 @@ import classes from "./event-list.module.css";
 
 export default function EventList(props: { items: eventsDataType[] }) {
   const { items } = props;
+
   console.log("items", items);
   return (
     <ul className={classes.list}>

@@ -52,6 +52,7 @@ export function getFilteredEvents(dateFilter: { year: number; month: number }) {
   return filteredEvents;
 }
 
-export function getEventById(id: string) {
+//더미 데이터 패치
+export function getEventById(id: string | string[] | undefined) {
   return DUMMY_EVENTS.find((event) => event.id === id);
 }
