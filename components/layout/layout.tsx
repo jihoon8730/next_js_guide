@@ -1,12 +1,14 @@
 import {
-  ReactElement,
+  Fragment,
   JSXElementConstructor,
+  ReactElement,
   ReactFragment,
   ReactPortal,
 } from "react";
-import classes from "./event-content.module.css";
 
-function EventContent(props: {
+import MainHeader from "./main-header";
+
+export default function Layout(props: {
   children:
     | string
     | ReactElement<any, string | JSXElementConstructor<any>>
@@ -15,7 +17,10 @@ function EventContent(props: {
     | null
     | undefined;
 }) {
-  return <section className={classes.content}>{props.children}</section>;
+  return (
+    <Fragment>
+      <MainHeader />
+      <main>{props.children}</main>
+    </Fragment>
+  );
 }
-
-export default EventContent;
